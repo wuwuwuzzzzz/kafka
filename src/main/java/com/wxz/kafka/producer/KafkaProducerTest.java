@@ -1,4 +1,4 @@
-package com.wxz.kafka;
+package com.wxz.kafka.producer;
 
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
@@ -16,7 +16,7 @@ public class KafkaProducerTest
     public static void main(String[] args)
     {
         // 创建配置对象
-        HashMap<String, Object> configMap = new HashMap<>();
+        HashMap<String, Object> configMap = new HashMap<>(10);
         configMap.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
 
         // 对生产的数据 K, V 进行序列化
